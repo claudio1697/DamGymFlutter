@@ -4,7 +4,7 @@
 
   "cliente":[
     { "nombre" : "Pepe", "apellidos" : "Lopez Ruiz","direccion" : "vall guart", "telefono" : 23233,"dni" : "23243f"},
-    { "nombre" : "Carlos", "apellidos" : "Montero Perez","direccion" : "avenida grande", "telefono" : 54543,"dni" : "54542G"},
+    { "nombre" : "Carlos", "apellidos" : "Montero Perez","direccion" : "avenida grande", "telefono" : 54543,"dni" : "54542G"}
     
   ]
   
