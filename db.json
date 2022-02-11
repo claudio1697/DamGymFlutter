@@ -1,1 +1,10 @@
 
+{
+
+"nombre" : "Pepe",
+  "apellidos" : "Ruiz Fernandez",
+    "direccion" : "vall guart",
+      "telefono" : "23232",
+        "dni" : "12334"
+
+}
