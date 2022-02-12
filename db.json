@@ -6,7 +6,9 @@
     { "nombre" : "Pepe", "apellidos" : "Lopez Ruiz","direccion" : "vall guart", "telefono" : 23233,"dni" : "23243f"},
     { "nombre" : "Carlos", "apellidos" : "Rodriguez Mendez","direccion" : "calle 5 torres", "telefono" : 23425,"dni" : "2324575"}
     
-    
+  ],
+  "reserva":[
+    {"fecha" : "2020-02-04", "hora" : "20:20"}
   ]
   
   
