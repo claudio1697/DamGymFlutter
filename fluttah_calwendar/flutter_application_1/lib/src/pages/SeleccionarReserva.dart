@@ -11,7 +11,12 @@ List<Monitor> _listaMonitores = [
 
 List<dynamic> _listaReservas = [];
 
-class SeleccionarReserva extends StatelessWidget {
+class SeleccionarReserva extends StatefulWidget {
+  @override
+  State<SeleccionarReserva> createState() => _SeleccionarReservaState();
+}
+
+class _SeleccionarReservaState extends State<SeleccionarReserva> {
   final ReservasProvider reservasProvider = new ReservasProvider();
 
   @override
@@ -88,7 +93,11 @@ class SeleccionarReserva extends StatelessWidget {
     );
   }
 
-//cambiAR
+  void _update() {
+    setState(() {});
+    print("borra");
+  }
+
   _borrarReserva(context, reserva) {
     showDialog(
         context: context,
@@ -115,7 +124,7 @@ class SeleccionarReserva extends StatelessWidget {
 
                       _listaReservas.remove(reserva);
                       Navigator.of(context, rootNavigator: true).pop();
-
+                      _update();
                       /*   Navigator.push(context,
                           MaterialPageRoute(builder: (context) => SeleccionarReserva())); */
 

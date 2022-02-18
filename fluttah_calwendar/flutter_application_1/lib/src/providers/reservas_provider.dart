@@ -37,4 +37,18 @@ class ReservasProvider {
     reservasSink(_listaReservas);
     return resp;
   }
+
+// hay que hacer un delete para borrar los datos desde la api
+  /*  Future<List<Reserva>> delete(int id) async {
+    // para acceder luego con el backend, hay que cargarse toda esa linea y poner solo /reserva
+    final urlFinal = _url + '/claudio1697/DamGymFlutter/reserva/$id';
+    final headers = {
+      
+    };
+    final url = http.delete(_url, '', {});
+    final resp = await _procesarRespuesta(url);
+    _listaReservas.addAll(resp);
+    reservasSink(_listaReservas);
+    return resp;
+  } */
 }
