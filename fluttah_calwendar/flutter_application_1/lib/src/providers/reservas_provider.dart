@@ -31,8 +31,9 @@ class ReservasProvider {
 
   Future<List<Reserva>> getReservas() async {
     // para acceder luego con el backend, hay que cargarse toda esa linea y poner solo /reserva
-    final url = Uri.https(_url, '/claudio1697/DamGymFlutter/reserva', {});
+    final url = Uri.http(_urlPC, '/reserva', {});
     final resp = await _procesarRespuesta(url);
+
     _listaReservas.addAll(resp);
     reservasSink(_listaReservas);
     return resp;
