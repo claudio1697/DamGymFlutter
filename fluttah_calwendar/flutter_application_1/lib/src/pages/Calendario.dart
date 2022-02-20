@@ -11,6 +11,22 @@ class calen extends StatefulWidget {
 class _HomePageState extends State<calen> {
   late DateTime _selectedDate;
 
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+
+      if (_selectedIndex == 0) {
+        Navigator.pushNamed(context, 'realizarReserva');
+      }
+
+      if (_selectedIndex == 1) {
+        Navigator.pushNamed(context, 'historialReservas');
+      }
+    });
+  }
+
   @override
   void initState() {
     super.initState();
@@ -18,13 +34,23 @@ class _HomePageState extends State<calen> {
   }
 
   void _resetSelectedDate() {
-    _selectedDate = DateTime.now().add(Duration(days: 5));
+    _selectedDate = DateTime.now().add(Duration(days: 0));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF333A47),
+      appBar: AppBar(
+          centerTitle: true,
+          elevation: 0,
+          title: Text(
+            'Calendario DamGym',
+            style: Theme.of(context)
+                .textTheme
+                .headline6!
+                .copyWith(color: Colors.tealAccent[100]),
+          )),
       body: SafeArea(
         child: Column(
           //CON ESTE CROSS CAMBIAMOS EL ORDEN DE LOS WIDGETS AL CENTRO
@@ -32,13 +58,6 @@ class _HomePageState extends State<calen> {
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.all(20),
-              child: Text(
-                'Calendario DamGym',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline6!
-                    .copyWith(color: Colors.tealAccent[100]),
-              ),
             ),
             CalendarTimeline(
               showYears: true,
@@ -78,10 +97,25 @@ class _HomePageState extends State<calen> {
               'Fecha seleccionada: $_selectedDate',
               style: TextStyle(color: Colors.white),
             )),
-            SizedBox(height: 40),
+            SizedBox(height: 31),
             _swiper(),
           ],
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'RESERVAR',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.business),
+            label: 'HISTORIAL RESERVAS',
+          ),
+        ],
+        currentIndex: 1,
+        selectedItemColor: Colors.amber[800],
+        onTap: _onItemTapped,
       ),
     );
   }

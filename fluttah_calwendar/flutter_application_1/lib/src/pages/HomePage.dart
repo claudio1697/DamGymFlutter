@@ -4,7 +4,7 @@ import 'dart:async';
 class HomePagee extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    new Future.delayed(const Duration(seconds: 5), () {
+    new Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushNamed(context, 'calendarioPantalla');
     });
 
