@@ -109,7 +109,7 @@ class _HomePageState extends State<calen> {
             label: 'RESERVAR',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
+            icon: Icon(Icons.access_alarms),
             label: 'HISTORIAL RESERVAS',
           ),
         ],

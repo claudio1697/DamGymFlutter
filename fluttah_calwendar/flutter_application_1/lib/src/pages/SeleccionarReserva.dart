@@ -89,6 +89,13 @@ class _SeleccionarReservaState extends State<SeleccionarReserva> {
                 return Center(child: CircularProgressIndicator());
               }
             }),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.pushNamed(context, 'calendarioPantalla');
+          },
+          child: Icon(Icons.arrow_back_ios_outlined),
+          backgroundColor: Colors.black,
+        ),
       ),
     );
   }

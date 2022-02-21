@@ -108,7 +108,7 @@ class _verHistorialReservas extends State<HistorialReservas> {
           bottomNavigationBar: BottomNavigationBar(
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(
-                icon: Icon(Icons.arrow_left),
+                icon: Icon(Icons.arrow_back_ios_outlined),
                 label: 'Volver Calendario',
               ),
               BottomNavigationBarItem(
