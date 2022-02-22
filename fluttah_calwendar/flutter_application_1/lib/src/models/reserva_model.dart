@@ -25,12 +25,11 @@ class Reserva {
 
 
 
-  Reserva.fromJsonMap(Map<String, dynamic> json) {
-    fecha = json['fecha'];
-    hora = json['hora'];
-
-    if (json['clase'] != null) {
-      clase = Clase.fromJsonMap(json['monitor']);
-    }
+  factory Reserva.fromJson(Map<String, dynamic> json) => Reserva(
+        fecha: json["fecha"] == null ? null : json["fecha"],
+        hora: json["hora"] == null ? null : json["hora"],
+        Clase: json["clase"] == null ? null : json["clase"],
+        Cliente: json["cliente"] == null ? null : json["clienate"],
+    );
   }
 }
