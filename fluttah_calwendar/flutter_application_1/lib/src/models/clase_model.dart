@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_null_comparison
+
 class Clases {
   List<Clase> items = [];
   Clases();
@@ -18,13 +20,12 @@ class Clase {
   int? capacidad;
   String? ubicacion;
 
-  Clase({
-    this.nombre,
-    this.descripcion,
-    this.capacidad,
-    this.monitor,
-    this.ubicacion
-  });
+  Clase(
+      {this.nombre,
+      this.descripcion,
+      this.capacidad,
+      this.monitor,
+      this.ubicacion});
 
   Clase.fromJsonMap(Map<String, dynamic> json) {
     nombre = json['nombre'];
@@ -34,5 +35,4 @@ class Clase {
     ubicacion = json['ubicacion'];
   }
 
- 
 }

@@ -22,10 +22,15 @@ class Reserva {
   Cliente? cliente;
 
   Reserva(this.fecha, this.hora, [this.clase]);
- 
+
+
+
   Reserva.fromJsonMap(Map<String, dynamic> json) {
     fecha = json['fecha'];
     hora = json['hora'];
-    clase = json['clase'];
+
+    if (json['clase'] != null) {
+      clase = Clase.fromJsonMap(json['monitor']);
+    }
   }
 }
