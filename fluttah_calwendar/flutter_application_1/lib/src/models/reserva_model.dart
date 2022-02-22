@@ -1,3 +1,7 @@
+import 'package:flutter_application_1/src/models/cliente_model.dart';
+
+import 'clase_model.dart';
+
 class Reservas {
   List<Reserva> items = [];
   Reservas();
@@ -14,14 +18,14 @@ class Reservas {
 class Reserva {
   String? fecha;
   String? hora;
+  Clase? clase;
+  Cliente? cliente;
 
-  Reserva({
-    this.fecha,
-    this.hora,
-  });
-
+  Reserva(this.fecha, this.hora, [this.clase]);
+ 
   Reserva.fromJsonMap(Map<String, dynamic> json) {
     fecha = json['fecha'];
     hora = json['hora'];
+    clase = json['clase'];
   }
 }
