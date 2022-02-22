@@ -112,8 +112,8 @@ class _verHistorialReservas extends State<HistorialReservas> {
                 label: 'Volver Calendario',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.fingerprint),
-                label: 'HISTORIAL RESERVAS',
+                icon: Icon(Icons.developer_mode_sharp),
+                label: 'Volver a Reservas',
               ),
             ],
             currentIndex: 1,
@@ -133,16 +133,8 @@ class _verHistorialReservas extends State<HistorialReservas> {
       }
 
       if (_seleccionarBoton == 1) {
-        print("BOTON 2");
-      }
-
-      /* if (_seleccionarBoton == 0) {
         Navigator.pushNamed(context, 'realizarReserva');
       }
-
-      if (_seleccionarBoton == 1) {
-        Navigator.pushNamed(context, 'historialReservas');
-      } */
     });
   }
 }

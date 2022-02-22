@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 
 class ReservasProvider {
   String _url = 'my-json-server.typicode.com';
-  String _urlPC = '192.168.1.114:8080';
+  String _urlPC = '192.168.1.20:8080';
 
   List<Reserva> _listaReservas = [];
 
