@@ -79,7 +79,8 @@ class _SeleccionarReservaState extends State<SeleccionarReserva> {
                               subtitle: Text('Fecha: ' +
                                   snapshot.data![index].fecha! +
                                   '\nHora: ' +
-                                  snapshot.data![index].hora!),
+                                  snapshot.data![index].hora! +
+                                  '\nClase: ' + snapshot.data![index].clase!),
                               //trailing es el icono de la derecha del todo de cada lista
                               trailing: Icon(Icons.arrow_forward_ios),
                             ),
